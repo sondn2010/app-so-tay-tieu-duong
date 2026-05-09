@@ -48,6 +48,8 @@ dependencies:
   # Utilities
   shared_preferences: ^2.2.3
   intl: ^0.19.0
+  # V4: image_picker added here (Phase 01) — owned by Coordinator, Phase 06 needs it
+  image_picker: ^1.1.2
 
 dev_dependencies:
   flutter_test:
