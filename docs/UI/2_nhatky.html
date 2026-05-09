@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tâm AI - Nhật ký đường huyết</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>.pencil-hatching-bottom {
+    background-image: repeating-linear-gradient(-45deg, transparent, transparent 4px, rgba(53, 103, 91, 0.05) 4px, rgba(53, 103, 91, 0.05) 5px)
+    }
+.diagonal-hatching-top {
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 6px, rgba(53, 103, 91, 0.1) 6px, rgba(53, 103, 91, 0.1) 7px)
+    }
+.paper-texture {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuB26xw40zDaDs5VkrIFH6YKdxfZqTDKVLwBJoRcJRoxEfOuP16FRr8rZ0uSbPtAWslFfL9mTKfiw7253AkjadesJcw8ViCBeyObdqIUvLlfCS8x8M1ObJnaHJBAlxMfiRTgAYTYrp5d8UnM_jBsnCr9ls6pcuy8KTPODtv0GsLpZ2lgCvKUjMvFyCarbigJN9lR8KBxDq3eumoRAubEmonZHzcNLi1yI0lgCYBb77V4e0QXT5IMqaYW1GVOwtz5w0NzLrnh67WBFVM)
+    }
+.hand-drawn-border {
+    border: 2px solid #35675b;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px
+    }
+.hand-drawn-border-thin {
+    border: 1.5px solid #707975;
+    border-radius: 4px 10px 4px 10px/10px 4px 10px 4px
+    }
+.sketch-circle-red {
+    border: 2.5px solid #ba1a1a;
+    border-radius: 50% 45% 52% 48%/48% 52% 45% 50%;
+    padding: 4px
+    }
+.graph-line {
+    stroke-dasharray: 5, 2
+    }</style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#fddc9a",
+                        "surface-container-low": "#f6f3ed",
+                        "on-primary-container": "#00342a",
+                        "tertiary-fixed": "#ffdada",
+                        "primary-fixed-dim": "#9dd1c2",
+                        "outline-variant": "#c0c8c4",
+                        "background": "#fcf9f3",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#c98083",
+                        "on-secondary-fixed-variant": "#594410",
+                        "on-surface-variant": "#404946",
+                        "secondary-fixed-dim": "#e2c383",
+                        "outline": "#707975",
+                        "on-surface": "#1c1c18",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1c1c18",
+                        "surface-container": "#f0eee8",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#6b9e90",
+                        "surface-container-high": "#ebe8e2",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#1a4f44",
+                        "surface-container-highest": "#e5e2dc",
+                        "secondary-fixed": "#ffdf9f",
+                        "on-tertiary-fixed": "#380b10",
+                        "on-tertiary-fixed-variant": "#6f3539",
+                        "inverse-surface": "#31312d",
+                        "surface-tint": "#35675b",
+                        "on-tertiary-container": "#4f1c20",
+                        "primary-fixed": "#b8eede",
+                        "tertiary-fixed-dim": "#ffb3b5",
+                        "on-secondary-container": "#775f2a",
+                        "tertiary": "#8b4c50",
+                        "surface-dim": "#dcdad4",
+                        "on-secondary-fixed": "#261a00",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f3f0ea",
+                        "on-primary-fixed": "#00201a",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#fcf9f3",
+                        "surface-variant": "#e5e2dc",
+                        "secondary": "#735b26",
+                        "primary": "#35675b",
+                        "surface": "#fcf9f3",
+                        "inverse-primary": "#9dd1c2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "24px",
+                        "base": "8px",
+                        "stack-sm": "4px",
+                        "gutter": "16px",
+                        "margin-mobile": "20px",
+                        "stack-md": "12px"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-md": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-lg": ["Be Vietnam Pro"],
+                        "headline-lg-mobile": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["26px", {"lineHeight": "32px", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md paper-texture min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center px-margin-mobile py-base w-full bg-surface-container-low border-b-2 border-primary/20 pencil-hatching-bottom">
+<div class="flex items-center gap-base">
+<div class="w-10 h-10 rounded-full border-2 border-primary overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A soft, hand-sketched avatar of a person with delicate pencil lines, appearing as a colored pencil portrait in a personal journal. The lighting is warm and natural, suggesting a quiet moment of reflection. The color palette is composed of muted teals and soft earth tones, maintaining the sketchbook aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApMI2TgYcZoj_Libcb6NG0zC6g01imryazGenihtM8u0F7DHvs-AyGUjpepeBAO5pifNiENDabOqK28nqmJ2oHUyyqeSb7j0tma9yZTDQ2hudhkVdTWp-CfXkoDxmm8BFCgYHrBw3-X7kJs7W3-FRU0OKe9E9_NtsHdv3VwpMnhEJXQJFQbhdj8w-9eQNsrpWoWM6xgwDgbOo8r3TkXdqQ_0vdltf03aqHEKwr-YY-cANFUD9Gpph0UJzjjgWMiW3oQhbCL1hynm8"/>
+</div>
+<h1 class="font-headline-md text-headline-md text-primary italic">Tâm AI</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center hover:bg-primary-container/20 transition-colors rounded-full">
+<span class="material-symbols-outlined text-primary" data-icon="lightbulb">lightbulb</span>
+</button>
+</header>
+<main class="px-margin-mobile pt-stack-lg space-y-stack-lg">
+<!-- Input Section: Hand-drawn Card -->
+<section class="hand-drawn-border bg-surface-container p-gutter rotate-[0.2deg] shadow-sm relative overflow-hidden">
+<div class="flex justify-between items-start mb-stack-md">
+<h2 class="font-headline-md text-headline-md text-primary">Nhập chỉ số</h2>
+<div class="flex gap-stack-sm bg-primary-container/10 p-1 rounded-lg border border-primary/20">
+<span class="font-label-lg text-label-lg px-2 py-1 bg-primary text-on-primary rounded">mg/dL</span>
+<span class="font-label-lg text-label-lg px-2 py-1 text-on-surface-variant">mmol/L</span>
+</div>
+</div>
+<div class="flex flex-col items-center py-stack-lg">
+<div class="text-center relative">
+<input class="bg-transparent border-none text-center font-headline-lg text-[64px] text-primary focus:ring-0 w-full mb-0" readonly="" type="text" value="105"/>
+<div class="h-[2px] w-32 bg-primary/40 mx-auto -mt-2"></div>
+<p class="font-label-lg text-label-lg text-outline mt-2 italic">Hôm nay, 08:30</p>
+</div>
+<!-- Hand-sketched Number Pad -->
+<div class="grid grid-cols-3 gap-base mt-stack-lg w-full max-w-[280px]">
+<template id="num-pad">
+<button class="hand-drawn-border-thin py-stack-md font-headline-md text-headline-md text-on-surface-variant hover:bg-secondary-container transition-all active:scale-95">1</button>
+</template>
+<script>
+                        const pad = document.getElementById('num-pad');
+                        const container = pad.parentElement;
+                        [1,2,3,4,5,6,7,8,9,'.',0,'X'].forEach(num => {
+                            const clone = pad.content.cloneNode(true);
+                            clone.querySelector('button').textContent = num;
+                            container.appendChild(clone);
+                        });
+                    </script>
+</div>
+<button class="mt-stack-lg w-full hand-drawn-border bg-primary/10 py-stack-md font-headline-md text-primary hover:bg-primary/20 transition-all active:scale-95">
+                    Lưu Nhật Ký
+                </button>
+</div>
+</section>
+<!-- Trend Chart: Pencil-drawn lines -->
+<section class="hand-drawn-border bg-surface-container-low p-gutter -rotate-[0.5deg]">
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-md flex items-center gap-base">
+<span class="material-symbols-outlined" data-icon="show_chart">show_chart</span>
+                Xu hướng 7 ngày
+            </h3>
+<div class="relative h-48 w-full mt-stack-lg overflow-visible">
+<!-- Simple SVG Graph for hand-drawn feel -->
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 300 100">
+<!-- Grid lines -->
+<line stroke="#c0c8c4" stroke-dasharray="2,2" stroke-width="1" x1="0" x2="300" y1="20" y2="20"></line>
+<line stroke="#c0c8c4" stroke-dasharray="2,2" stroke-width="1" x1="0" x2="300" y1="80" y2="80"></line>
+<!-- The trend line -->
+<path class="graph-line" d="M 10 60 Q 40 40 70 50 T 130 85 T 190 30 T 250 55 T 290 45" fill="none" stroke="#35675b" stroke-width="2"></path>
+<!-- Data points -->
+<circle cx="10" cy="60" fill="#35675b" r="3"></circle>
+<circle cx="70" cy="50" fill="#35675b" r="3"></circle>
+<circle cx="130" cy="85" fill="#35675b" r="3"></circle>
+<circle cx="190" cy="30" fill="none" r="4" stroke="#ba1a1a" stroke-width="2"></circle> <!-- Abnormal point highlighted -->
+<circle cx="190" cy="30" fill="#ba1a1a" r="2"></circle>
+<circle cx="250" cy="55" fill="#35675b" r="3"></circle>
+<circle cx="290" cy="45" fill="#35675b" r="3"></circle>
+</svg>
+<div class="flex justify-between mt-stack-sm px-1">
+<span class="font-label-lg text-label-lg text-outline">T2</span>
+<span class="font-label-lg text-label-lg text-outline">T3</span>
+<span class="font-label-lg text-label-lg text-outline">T4</span>
+<span class="font-label-lg text-label-lg text-outline">T5</span>
+<span class="font-label-lg text-label-lg text-outline text-error">T6</span>
+<span class="font-label-lg text-label-lg text-outline">T7</span>
+<span class="font-label-lg text-label-lg text-outline">CN</span>
+</div>
+</div>
+<div class="mt-stack-lg p-base bg-error-container/20 rounded-lg border-l-4 border-error italic text-on-surface-variant font-body-md">
+                "Hôm Thứ 6 chỉ số hơi cao (165 mg/dL). Bạn có ăn đồ ngọt nhiều hơn không?"
+            </div>
+</section>
+<!-- History List -->
+<section class="space-y-stack-md">
+<h3 class="font-headline-md text-headline-md text-primary px-1">Lịch sử đo</h3>
+<div class="space-y-stack-sm">
+<!-- Measurement Item -->
+<div class="flex items-center justify-between p-stack-md border-b border-outline-variant/40">
+<div class="flex items-center gap-gutter">
+<div class="text-center w-12">
+<p class="font-headline-md text-headline-md">12</p>
+<p class="font-label-lg text-label-lg text-outline">Th10</p>
+</div>
+<div>
+<p class="font-body-lg text-body-lg">Sau bữa sáng</p>
+<p class="font-label-lg text-label-lg text-outline">08:15 • Bình thường</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-headline-md text-headline-md text-primary">98</p>
+<p class="font-label-lg text-label-lg text-outline">mg/dL</p>
+</div>
+</div>
+<!-- Abnormal Measurement Item -->
+<div class="flex items-center justify-between p-stack-md border-b border-outline-variant/40 bg-error-container/5">
+<div class="flex items-center gap-gutter">
+<div class="text-center w-12">
+<p class="font-headline-md text-headline-md">11</p>
+<p class="font-label-lg text-label-lg text-outline">Th10</p>
+</div>
+<div>
+<p class="font-body-lg text-body-lg">Trước khi ngủ</p>
+<p class="font-label-lg text-label-lg text-error">22:45 • Cao</p>
+</div>
+</div>
+<div class="text-right sketch-circle-red">
+<p class="font-headline-md text-headline-md text-error">165</p>
+<p class="font-label-lg text-label-lg text-error">mg/dL</p>
+</div>
+</div>
+<div class="flex items-center justify-between p-stack-md border-b border-outline-variant/40">
+<div class="flex items-center gap-gutter">
+<div class="text-center w-12">
+<p class="font-headline-md text-headline-md">11</p>
+<p class="font-label-lg text-label-lg text-outline">Th10</p>
+</div>
+<div>
+<p class="font-body-lg text-body-lg">Trước bữa trưa</p>
+<p class="font-label-lg text-label-lg text-outline">11:30 • Bình thường</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-headline-md text-headline-md text-primary">102</p>
+<p class="font-label-lg text-label-lg text-outline">mg/dL</p>
+</div>
+</div>
+</div>
+<button class="w-full py-stack-md font-label-lg text-label-lg text-primary underline decoration-dotted underline-offset-4">
+                Xem toàn bộ lịch sử
+            </button>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface-container-low border-t-2 border-primary/30 diagonal-hatching-top flex justify-around items-center px-gutter py-stack-md h-20">
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant p-stack-sm hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-lg text-label-lg">Trang chủ</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-stack-md py-stack-sm ring-2 ring-primary/40 -translate-y-1 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="edit_note" style="font-variation-settings: 'FILL' 1;">edit_note</span>
+<span class="font-label-lg text-label-lg">Nhật ký</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant p-stack-sm hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>
+<span class="font-label-lg text-label-lg">Trợ lý AI</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant p-stack-sm hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-label-lg text-label-lg">Kiến thức</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant p-stack-sm hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-lg text-label-lg">Hồ sơ</span>
+</button>
+</nav>
+<!-- Contextual FAB (Only on relevant pages) -->
+<button class="fixed bottom-24 right-margin-mobile w-14 h-14 bg-secondary-container text-on-secondary-container hand-drawn-border flex items-center justify-center shadow-lg active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</body></html>

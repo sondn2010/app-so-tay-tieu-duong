@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tâm AI - Sổ tay kiến thức</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .pencil-hatching-bottom {
+            background-image: repeating-linear-gradient(135deg, rgba(53, 103, 91, 0.1), rgba(53, 103, 91, 0.1) 1px, transparent 1px, transparent 4px);
+        }
+        .diagonal-hatching-top {
+            background-image: repeating-linear-gradient(45deg, rgba(53, 103, 91, 0.05), rgba(53, 103, 91, 0.05) 1px, transparent 1px, transparent 6px);
+        }
+        .paper-texture {
+            background-color: #fcf9f3;
+            background-image: 
+                radial-gradient(#dcdad4 0.5px, transparent 0.5px),
+                radial-gradient(#dcdad4 0.5px, #fcf9f3 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+        .sketch-border {
+            border: 2px solid #35675b;
+            box-shadow: 2px 2px 0px 0px rgba(53, 103, 91, 0.2);
+            position: relative;
+        }
+        .sketch-border::after {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            border: 1px solid rgba(53, 103, 91, 0.3);
+            pointer-events: none;
+            border-radius: inherit;
+            transform: rotate(0.5deg);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#775f2a",
+                        "on-tertiary-container": "#4f1c20",
+                        "surface-container-low": "#f6f3ed",
+                        "secondary-container": "#fddc9a",
+                        "on-secondary-fixed-variant": "#594410",
+                        "on-secondary-fixed": "#261a00",
+                        "surface-variant": "#e5e2dc",
+                        "on-primary-container": "#00342a",
+                        "on-background": "#1c1c18",
+                        "on-primary-fixed-variant": "#1a4f44",
+                        "outline-variant": "#c0c8c4",
+                        "on-tertiary-fixed": "#380b10",
+                        "inverse-on-surface": "#f3f0ea",
+                        "background": "#fcf9f3",
+                        "tertiary-container": "#c98083",
+                        "primary": "#35675b",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e5e2dc",
+                        "secondary-fixed": "#ffdf9f",
+                        "surface-container": "#f0eee8",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb3b5",
+                        "surface-bright": "#fcf9f3",
+                        "secondary-fixed-dim": "#e2c383",
+                        "surface-dim": "#dcdad4",
+                        "surface-container-high": "#ebe8e2",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#35675b",
+                        "on-tertiary-fixed-variant": "#6f3539",
+                        "on-surface-variant": "#404946",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#31312d",
+                        "inverse-primary": "#9dd1c2",
+                        "tertiary-fixed": "#ffdada",
+                        "tertiary": "#8b4c50",
+                        "surface": "#fcf9f3",
+                        "primary-fixed": "#b8eede",
+                        "primary-fixed-dim": "#9dd1c2",
+                        "on-surface": "#1c1c18",
+                        "primary-container": "#6b9e90",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#00201a",
+                        "secondary": "#735b26",
+                        "outline": "#707975"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "24px",
+                        "gutter": "16px",
+                        "margin-mobile": "20px",
+                        "base": "8px",
+                        "stack-md": "12px",
+                        "stack-sm": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Be Vietnam Pro"],
+                        "headline-lg-mobile": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "label-lg": ["Be Vietnam Pro"],
+                        "headline-lg": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["26px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-lg": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="paper-texture min-h-screen text-on-background font-body-md overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="docked full-width top-0 z-50 border-b-2 border-primary/20 bg-surface-container-low/95 backdrop-blur-sm flex justify-between items-center px-margin-mobile py-base w-full">
+<div class="flex items-center gap-base">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center sketch-border overflow-hidden">
+<img alt="User" data-alt="A detailed pencil sketch portrait of a friendly health assistant in a circular frame. The drawing features delicate graphite lines, soft shading, and a textured paper background, reflecting a warm, personal, and artisanal aesthetic consistent with a health-focused digital journal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvYaCCRlc7ih-9G5Y3XJecFByn8d--IP3aYbotNNJ8Tw0Xavq-IENLACnOPoxEkCdcmNf2NhUuK45nFVwNfWId7Yl26lDgkGRWdmNWHk1Oc-DMvGoRGq0SGL5SWe7Gwoae5hC3zuuIzIF9AGRSEfpmNSvVxU1CI3ZY4BocdgaH_HKBS1UiVm2VD88-NQaAs0Xt7PTra9c3GHph5rkOgoD6Mw-vZPHxyMMUQ50UukILPkoo6KxvlXghE-OgGEdH-HmuHruUeW9sSSM"/>
+</div>
+<h1 class="font-headline-md text-headline-md text-primary italic">Tâm AI</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center text-primary hover:bg-primary-container/20 transition-colors rounded-xl">
+<span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span>
+</button>
+</header>
+<main class="pt-20 pb-32 px-margin-mobile max-w-4xl mx-auto">
+<!-- Hero Search Section -->
+<section class="mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md -rotate-1 origin-left">Sổ tay kiến thức</h2>
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+</div>
+<input class="w-full bg-surface-container-lowest sketch-border py-4 pl-12 pr-4 rounded-xl focus:ring-primary focus:border-primary border-2 border-primary/30 outline-none placeholder:text-outline-variant font-body-lg" placeholder="Tìm kiếm kiến thức..." type="text"/>
+</div>
+</section>
+<!-- Category Chips -->
+<section class="mb-stack-lg overflow-x-auto pb-stack-sm">
+<div class="flex gap-stack-md whitespace-nowrap min-w-max">
+<button class="bg-primary-container text-on-primary-container px-4 py-2 rounded-full sketch-border text-label-lg font-label-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                    Yêu thích
+                </button>
+<button class="bg-surface-container-high text-on-surface-variant px-4 py-2 rounded-full sketch-border border-dashed text-label-lg font-label-lg">Tiểu đường là gì</button>
+<button class="bg-surface-container-high text-on-surface-variant px-4 py-2 rounded-full sketch-border border-dashed text-label-lg font-label-lg">Chỉ số đường huyết</button>
+<button class="bg-surface-container-high text-on-surface-variant px-4 py-2 rounded-full sketch-border border-dashed text-label-lg font-label-lg">Biến chứng</button>
+<button class="bg-surface-container-high text-on-surface-variant px-4 py-2 rounded-full sketch-border border-dashed text-label-lg font-label-lg">Cách dùng thuốc</button>
+<button class="bg-surface-container-high text-on-surface-variant px-4 py-2 rounded-full sketch-border border-dashed text-label-lg font-label-lg">Thực phẩm</button>
+</div>
+</section>
+<!-- Knowledge List: Bento/Asymmetric Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+<!-- Article Card 1 -->
+<article class="bg-surface-container-lowest p-stack-lg sketch-border rounded-xl rotate-[0.5deg] hover:-rotate-1 transition-transform duration-300 relative group cursor-pointer">
+<div class="flex justify-between items-start mb-stack-md">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="menu_book">menu_book</span>
+<span class="material-symbols-outlined text-outline-variant hover:text-error transition-colors" data-icon="favorite">favorite</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Tiểu đường Type 2: Những điều cơ bản</h3>
+<p class="text-on-surface-variant line-clamp-3 mb-stack-md font-body-md italic border-l-2 border-primary/20 pl-stack-md">Hiểu rõ về cơ chế kháng insulin và cách cơ thể điều tiết glucose một cách đơn giản nhất...</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-label-lg font-label-lg text-primary uppercase tracking-wider">Cơ bản</span>
+<span class="text-label-lg font-label-lg text-outline-variant">5 phút đọc</span>
+</div>
+<div class="absolute -bottom-2 -right-2 w-full h-full pencil-hatching-bottom -z-10 rounded-xl opacity-50"></div>
+</article>
+<!-- Article Card 2 -->
+<article class="bg-secondary-container/30 p-stack-lg sketch-border rounded-xl -rotate-[0.8deg] hover:rotate-1 transition-transform duration-300 relative group cursor-pointer">
+<div class="flex justify-between items-start mb-stack-md">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="restaurant">restaurant</span>
+<span class="material-symbols-outlined text-error" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Thực đơn Low-GI hàng ngày</h3>
+<p class="text-on-surface-variant line-clamp-3 mb-stack-md font-body-md">Danh sách các loại thực phẩm có chỉ số đường huyết thấp giúp duy trì mức năng lượng ổn định...</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-label-lg font-label-lg text-secondary uppercase tracking-wider">Thực phẩm</span>
+<span class="text-label-lg font-label-lg text-outline-variant">8 phút đọc</span>
+</div>
+</article>
+<!-- Article Card 3 (Wide) -->
+<article class="md:col-span-2 bg-surface-container-high p-stack-lg sketch-border rounded-xl rotate-[0.3deg] relative group cursor-pointer overflow-hidden">
+<div class="flex flex-col md:flex-row gap-stack-lg">
+<div class="md:w-1/3">
+<img alt="Vận động" class="w-full h-40 object-cover rounded-lg sketch-border grayscale contrast-125" data-alt="A hand-drawn charcoal and pencil illustration of a person lightly jogging in a park. The style is lo-fi and sketch-like with expressive line work, cross-hatching for shadows, and a warm, aged paper texture. The mood is encouraging and serene, fitting a personal wellness journal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlSVnotR4y3xMLMELRGVolRbuMFUz2_NfkakFR7dQ-NMNKe9OC19ZK81v8YTAvBcN9jPLDIsw5ipz8p7xHup4im_BCOFfAnRkKCi6nVmAPWs8BEWmSVQ0L0wNbXlomqArUAAMgeoXdS3QBVaTU0iH8RoNGKf9rgIo_5c5VkUmV0IkKQ64daB7phmYBXKqv-i8L4BCbz-7mgytou7GP8hNTlrn8sX5pG5KSjVT4iTfTmsMXcP5oNn4v_dDOjct_4tnXFv-6Gc2E5Kw"/>
+</div>
+<div class="md:w-2/3 flex flex-col justify-center">
+<div class="flex justify-between items-start mb-base">
+<span class="text-label-lg font-label-lg bg-primary/10 text-primary px-2 py-1 rounded">Vận động</span>
+<span class="material-symbols-outlined text-outline-variant" data-icon="favorite">favorite</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">15 phút Yoga nhẹ nhàng mỗi sáng</h3>
+<p class="text-on-surface-variant font-body-md mb-stack-md italic">Các bài tập không quá tốn sức nhưng hiệu quả trong việc kích thích chuyển hóa...</p>
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="history">history</span>
+<span class="text-label-lg font-label-lg text-outline">Cập nhật 2 ngày trước</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Article Card 4 -->
+<article class="bg-tertiary-container/20 p-stack-lg sketch-border rounded-xl rotate-[1.2deg] hover:rotate-0 transition-transform duration-300 relative group cursor-pointer">
+<div class="flex justify-between items-start mb-stack-md">
+<span class="material-symbols-outlined text-tertiary text-4xl" data-icon="medical_services">medical_services</span>
+<span class="material-symbols-outlined text-outline-variant" data-icon="favorite">favorite</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Lưu ý khi dùng Metformin</h3>
+<p class="text-on-surface-variant line-clamp-3 mb-stack-md font-body-md">Thời điểm uống thuốc tốt nhất và cách xử lý các tác dụng phụ thường gặp ở hệ tiêu hóa...</p>
+<div class="flex items-center justify-between">
+<span class="text-label-lg font-label-lg text-tertiary uppercase tracking-wider">Thuốc</span>
+<span class="text-label-lg font-label-lg text-outline-variant">10 phút đọc</span>
+</div>
+</article>
+<!-- Article Card 5 -->
+<article class="bg-surface-container-lowest p-stack-lg sketch-border rounded-xl -rotate-[0.5deg] hover:rotate-0 transition-transform duration-300 relative group cursor-pointer">
+<div class="flex justify-between items-start mb-stack-md">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="monitoring">monitoring</span>
+<span class="material-symbols-outlined text-outline-variant" data-icon="favorite">favorite</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Giải mã chỉ số HbA1c</h3>
+<p class="text-on-surface-variant line-clamp-3 mb-stack-md font-body-md border-b border-dashed border-outline-variant pb-base">Vì sao chỉ số này quan trọng hơn mức đường huyết đo tại nhà tức thời?</p>
+<div class="flex items-center justify-between">
+<span class="text-label-lg font-label-lg text-primary uppercase tracking-wider">Chỉ số</span>
+<span class="text-label-lg font-label-lg text-outline-variant">6 phút đọc</span>
+</div>
+</article>
+</div>
+<!-- Pagination/More Link -->
+<div class="mt-stack-lg flex justify-center">
+<button class="bg-background text-primary border-2 border-primary px-8 py-3 rounded-xl sketch-border font-headline-md italic flex items-center gap-2 hover:bg-primary/5 transition-colors">
+                Xem thêm kiến thức
+                <span class="material-symbols-outlined" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl border-t-2 border-primary/30 bg-surface-container-low dark:bg-surface-container-highest diagonal-hatching-top flex justify-around items-center px-gutter py-stack-md">
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant p-stack-sm hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-lg text-label-lg mt-1">Trang chủ</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant p-stack-sm hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+<span class="font-label-lg text-label-lg mt-1">Nhật ký</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant p-stack-sm hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>
+<span class="font-label-lg text-label-lg mt-1">Trợ lý AI</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary-fixed-variant text-on-primary-container dark:text-on-primary-fixed rounded-xl px-stack-md py-stack-sm ring-2 ring-primary/40 -translate-y-1 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-label-lg text-label-lg mt-1">Kiến thức</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant p-stack-sm hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-lg text-label-lg mt-1">Hồ sơ</span>
+</div>
+</nav>
+</body></html>

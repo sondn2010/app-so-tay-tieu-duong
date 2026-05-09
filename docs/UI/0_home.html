@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tâm AI - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>body {
+    font-family: "Be Vietnam Pro", sans-serif
+    }
+.pencil-border {
+    border: 2px solid #35675b;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 2px 2px 0 rgba(53, 103, 91, 0.2)
+    }
+.pencil-border::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 1px solid rgba(53, 103, 91, 0.3);
+    pointer-events: none;
+    border-radius: 6px;
+    transform: rotate(-0.5deg)
+    }
+.hatching-bottom {
+    background-image: repeating-linear-gradient(135deg, transparent, transparent 4px, rgba(53, 103, 91, 0.05) 4px, rgba(53, 103, 91, 0.05) 5px)
+    }
+.sketch-card {
+    transform: rotate(0.2deg);
+    transition: transform 0.2s ease
+    }
+.sketch-card:nth-child(even) {
+    transform: rotate(-0.3deg)
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.pencil-line {
+    height: 2px;
+    background: repeating-linear-gradient(to right, #35675b, #35675b 10px, transparent 10px, transparent 12px);
+    opacity: 0.3;
+    width: 90%;
+    margin: 0 auto
+    }</style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#fddc9a",
+                        "surface-container-low": "#f6f3ed",
+                        "on-primary-container": "#00342a",
+                        "tertiary-fixed": "#ffdada",
+                        "primary-fixed-dim": "#9dd1c2",
+                        "outline-variant": "#c0c8c4",
+                        "background": "#fcf9f3",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#c98083",
+                        "on-secondary-fixed-variant": "#594410",
+                        "on-surface-variant": "#404946",
+                        "secondary-fixed-dim": "#e2c383",
+                        "outline": "#707975",
+                        "on-surface": "#1c1c18",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1c1c18",
+                        "surface-container": "#f0eee8",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#6b9e90",
+                        "surface-container-high": "#ebe8e2",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#1a4f44",
+                        "surface-container-highest": "#e5e2dc",
+                        "secondary-fixed": "#ffdf9f",
+                        "on-tertiary-fixed": "#380b10",
+                        "on-tertiary-fixed-variant": "#6f3539",
+                        "inverse-surface": "#31312d",
+                        "surface-tint": "#35675b",
+                        "on-tertiary-container": "#4f1c20",
+                        "primary-fixed": "#b8eede",
+                        "tertiary-fixed-dim": "#ffb3b5",
+                        "on-secondary-container": "#775f2a",
+                        "tertiary": "#8b4c50",
+                        "surface-dim": "#dcdad4",
+                        "on-secondary-fixed": "#261a00",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f3f0ea",
+                        "on-primary-fixed": "#00201a",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#fcf9f3",
+                        "surface-variant": "#e5e2dc",
+                        "secondary": "#735b26",
+                        "primary": "#35675b",
+                        "surface": "#fcf9f3",
+                        "inverse-primary": "#9dd1c2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "24px",
+                        "base": "8px",
+                        "stack-sm": "4px",
+                        "gutter": "16px",
+                        "margin-mobile": "20px",
+                        "stack-md": "12px"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-md": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-lg": ["Be Vietnam Pro"],
+                        "headline-lg-mobile": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["26px", {"lineHeight": "32px", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background min-h-screen pb-24 bg-surface">
+<!-- Top App Bar -->
+<header class="bg-background border-b-2 border-primary/20 flex justify-between items-center px-margin-mobile py-base w-full sticky top-0 z-40">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border-2 border-primary overflow-hidden pencil-border">
+<img alt="User Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0d7ugLRhTh1FTBBPTd0uTqmPhkGW9xw-hwvflnNXzdHhaIOB66xDpCrYV7vmV0WwU42QcfR10HF-RZNM5J_TuxG0A3rOPKSxRbCzEJ8rQJeC3TPEVhs3Bet4pR8HnSL6LZMgxPmGNketOyL6uv-4Qikwd53E_NaPUI90-rP9NFzjvWVeYhXbAffE30eSHhrB3Z2qtOMQpKQjhFhX6mrUcdN4yY0B4uEsmokwFsUrug62Mhte9rD8howoLRrAVtF37S9ftf-ppXQo"/>
+</div>
+<h1 class="font-headline-md text-headline-md text-primary italic">Tâm AI</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-primary-container/20 transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="lightbulb">lightbulb</span>
+</button>
+</header>
+<main class="px-margin-mobile pt-stack-lg space-y-gutter max-w-2xl mx-auto">
+<!-- Welcome Section -->
+<section class="sketch-card">
+<div class="p-gutter pencil-border bg-surface-container-low">
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label-lg text-label-lg text-outline">Chào buổi sáng, Nam! 🌿</p>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mt-1">Sức khỏe hôm nay</h2>
+</div>
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="star">star</span>
+</div>
+</div>
+</section>
+<!-- Blood Glucose Widget -->
+<section class="sketch-card">
+<div class="p-gutter pencil-border bg-white space-y-stack-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="water_drop">water_drop</span>
+<h3 class="font-label-lg text-label-lg uppercase">Đường huyết</h3>
+</div>
+<span class="px-2 py-1 rounded-full border border-primary text-[10px] font-bold text-primary bg-primary-container/10">BÌNH THƯỜNG</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-bold text-primary">110</span>
+<span class="font-label-lg text-label-lg text-outline">mg/dL</span>
+</div>
+<!-- 7-day mini chart -->
+<div class="pt-4">
+<div class="flex items-end justify-between h-16 gap-2">
+<div class="w-full bg-primary/20 rounded-t-sm h-[60%] pencil-border border-primary/40 relative group">
+<div class="absolute inset-0 hatching-bottom opacity-50"></div>
+</div>
+<div class="w-full bg-primary/20 rounded-t-sm h-[80%] pencil-border border-primary/40 relative group">
+<div class="absolute inset-0 hatching-bottom opacity-50"></div>
+</div>
+<div class="w-full bg-primary/20 rounded-t-sm h-[40%] pencil-border border-primary/40 relative group">
+<div class="absolute inset-0 hatching-bottom opacity-50"></div>
+</div>
+<div class="w-full bg-primary/20 rounded-t-sm h-[90%] pencil-border border-primary/40 relative group">
+<div class="absolute inset-0 hatching-bottom opacity-50"></div>
+</div>
+<div class="w-full bg-primary/20 rounded-t-sm h-[55%] pencil-border border-primary/40 relative group">
+<div class="absolute inset-0 hatching-bottom opacity-50"></div>
+</div>
+<div class="w-full bg-primary/20 rounded-t-sm h-[70%] pencil-border border-primary/40 relative group">
+<div class="absolute inset-0 hatching-bottom opacity-50"></div>
+</div>
+<div class="w-full bg-primary h-[85%] pencil-border border-primary relative group">
+<div class="absolute inset-0 hatching-bottom opacity-50"></div>
+</div>
+</div>
+<div class="flex justify-between mt-2 text-[10px] text-outline font-medium">
+<span>T2</span><span>T3</span><span>T4</span><span>T5</span><span>T6</span><span>T7</span><span class="text-primary font-bold">CN</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Medication Reminder Banner -->
+<section class="sketch-card">
+<div class="p-gutter pencil-border bg-secondary-container/30 border-secondary flex items-center gap-4">
+<div class="bg-secondary/20 p-2 rounded-lg border border-dashed border-secondary">
+<span class="material-symbols-outlined text-secondary" data-icon="medication">medication</span>
+</div>
+<div class="flex-1">
+<h4 class="font-label-lg text-label-lg text-on-secondary-container">Nhắc nhở thuốc</h4>
+<p class="font-body-md text-body-md text-on-secondary-container">Uống <span class="font-bold">Metformin</span> sau bữa tối</p>
+</div>
+<button class="bg-secondary text-white px-3 py-1 rounded-md text-xs font-bold shadow-sm hover:opacity-80">XONG</button>
+</div>
+</section>
+<!-- Daily Summary Grid -->
+<div class="grid grid-cols-2 gap-gutter">
+<!-- Doses Taken -->
+<div class="sketch-card">
+<div class="p-gutter pencil-border bg-tertiary-container/10 border-tertiary space-y-2">
+<span class="material-symbols-outlined text-tertiary" data-icon="pill">pill</span>
+<div>
+<p class="font-label-lg text-label-lg text-outline">Đã uống</p>
+<p class="font-headline-md text-headline-md text-tertiary">2 / 3 <span class="text-xs">liều</span></p>
+</div>
+</div>
+</div>
+<!-- Steps Count -->
+<div class="sketch-card">
+<div class="p-gutter pencil-border bg-primary-container/10 border-primary space-y-2">
+<span class="material-symbols-outlined text-primary" data-icon="directions_walk">directions_walk</span>
+<div>
+<p class="font-label-lg text-label-lg text-outline">Vận động</p>
+<p class="font-headline-md text-headline-md text-primary">3,240 <span class="text-xs">bước</span></p>
+</div>
+</div>
+</div>
+</div>
+<!-- Featured Illustration / Visual Content -->
+<section class="sketch-card mt-4">
+<div class="pencil-border overflow-hidden bg-white">
+<img class="w-full h-48 object-cover opacity-80 grayscale-[20%]" data-alt="A warm and inviting hand-drawn illustration style digital painting of a healthy Vietnamese meal with fresh vegetables and rice on a textured paper background. The lighting is soft and natural, resembling a cozy afternoon sun. The colors are muted greens, warm yellows, and soft terracotta, consistent with a personal digital sketchbook aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFSctQeKpvxDPJg_Y8dbhN0v6uFPBtnsmep1lLhIIcrJZJW8cc7JrazctJhRkF-FK1nhmEA386bjnjLwi43SK94TqCmLCnxHQjDpnjhnoyJXOrsM-YBgTG5So8TPhTw4zkSFd-sPMkoadb4fG4HlDuBZpI-_AG67lL-EF_WCXxBOsgJFiS33g8LpsB1EQSE32NYaU8q3vQOokorYaJFDeKhX9mFXZ8SVV7n0F-kdhyQar2Odg3y8igUc92qhQFAkkarOaiFcJeLts"/>
+<div class="p-gutter">
+<h5 class="font-label-lg text-label-lg text-primary">Gợi ý hôm nay</h5>
+<p class="font-body-md text-body-md mt-1 italic text-on-surface-variant">"Mỗi bữa ăn lành mạnh là một bước tiến gần hơn đến sự cân bằng."</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface-container-low border-t-2 border-primary/30 flex justify-around items-center px-gutter py-stack-md shadow-lg">
+<button class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-stack-md py-stack-sm ring-2 ring-primary/40 -translate-y-1 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="home" data-weight="fill">home</span>
+<span class="font-label-lg text-[10px]">Trang chủ</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant p-stack-sm hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+<span class="font-label-lg text-[10px]">Nhật ký</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant p-stack-sm hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>
+<span class="font-label-lg text-[10px]">Trợ lý AI</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant p-stack-sm hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-label-lg text-[10px]">Kiến thức</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant p-stack-sm hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-lg text-[10px]">Hồ sơ</span>
+</button>
+</nav>
+<!-- Decorative Hand-drawn Elements -->
+<div class="fixed top-24 right-4 pointer-events-none opacity-20">
+<span class="material-symbols-outlined text-6xl text-secondary" style="font-variation-settings: 'FILL' 0;">cloud</span>
+</div>
+<div class="fixed bottom-32 left-4 pointer-events-none opacity-20 transform rotate-12">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 0;">local_florist</span>
+</div>
+</body></html>
