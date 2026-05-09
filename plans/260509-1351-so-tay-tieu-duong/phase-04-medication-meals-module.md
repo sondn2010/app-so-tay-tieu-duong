@@ -1,6 +1,6 @@
 # Phase 04 — Medication & Meals Module (Thuốc & Bữa Ăn)
 
-**Status:** pending  
+**Status:** complete  
 **Priority:** high  
 **BlockedBy:** Phase 02  
 **File ownership:** `src/lib/features/medication/` (Agent 2 only)  
@@ -213,19 +213,19 @@ Exposed as a public widget, consumed by `HomeScreen` (Phase 07).
 
 ## Todo
 
-- [ ] DoseLog schema already in isar-database.dart from Phase 02 (F1) — no coordinator msg needed
-- [ ] Implement repositories (medication, dose-log)
-- [ ] Implement Riverpod providers
-- [ ] Implement notification sync with targeted cancel (F15)
-- [ ] Implement `MedicationReminderBanner` widget
-- [ ] Implement medication list + form screens (Stitch MCP → ref `0_home.html` medication banner)
-- [ ] Test: mark XONG → todaySummary increments (idempotent — double tap stays at 1)
-- [ ] Test: add medication → notification scheduled
-- [ ] Test: nextPendingDose() returns null after all doses marked done
+- [x] DoseLog schema already in isar-database.dart from Phase 02 (F1) — no coordinator msg needed
+- [x] Implement repositories (medication, dose-log)
+- [x] Implement Riverpod providers
+- [x] Implement notification sync with targeted cancel (F15)
+- [x] Implement `MedicationReminderBanner` widget
+- [x] Implement medication list + form screens (Stitch MCP → ref `0_home.html` medication banner)
+- [x] Test: mark XONG → todaySummary increments (idempotent — double tap stays at 1)
+- [x] Test: add medication → notification scheduled
+- [x] Test: nextPendingDose() returns null after all doses marked done
 
 ## Success Criteria
 
-- [ ] XONG button marks dose done + updates counter
-- [ ] Daily dose summary `todayDoseSummaryProvider` returns correct X/Y
-- [ ] `MedicationReminderBanner` widget usable by Home dashboard
-- [ ] Medication CRUD + notification sync works end-to-end
+- [x] XONG button marks dose done + updates counter
+- [x] Daily dose summary `todayDoseSummaryProvider` returns correct X/Y
+- [x] `MedicationReminderBanner` widget usable by Home dashboard
+- [x] Medication CRUD + notification sync works end-to-end

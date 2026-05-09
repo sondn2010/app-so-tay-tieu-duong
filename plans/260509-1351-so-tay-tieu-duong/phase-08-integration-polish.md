@@ -1,6 +1,6 @@
 # Phase 08 — Integration, Routing & Polish
 
-**Status:** pending  
+**Status:** complete  
 **Priority:** medium  
 **BlockedBy:** Phase 05, 06, 07  
 **Owner:** Coordinator
@@ -149,29 +149,29 @@ android:label="Sổ Tay Tiểu Đường"
 
 ```
 UI Fidelity
-[ ] Home screen matches docs/UI/0_home.png
-[ ] Diary screen matches docs/UI/2_nhatky.png
-[ ] Knowledge screen matches docs/UI/4_sotaykienthuc.png
-[ ] Profile screen matches docs/UI/5_hosonguoidung.png
-[ ] Warm paper background (#FCF9F3) on all screens
-[ ] Be Vietnam Pro font renders on device
+[x] Home screen matches docs/UI/0_home.png
+[x] Diary screen matches docs/UI/2_nhatky.png
+[x] Knowledge screen matches docs/UI/4_sotaykienthuc.png
+[x] Profile screen matches docs/UI/5_hosonguoidung.png
+[x] Warm paper background (#FCF9F3) on all screens
+[x] Be Vietnam Pro font renders on device
 
 Functionality
-[ ] Blood sugar entry (numpad) → list → chart updates < 1s
-[ ] Unit toggle mg/dL ↔ mmol/L works correctly
-[ ] Abnormal entry shows red circled value
-[ ] Medication CRUD + XONG → dose counter updates
-[ ] Knowledge articles offline on fresh install
-[ ] Favorite article persists across restarts
-[ ] Profile target range change reflects in blood sugar status
-[ ] Onboarding shows once, skipped thereafter
-[ ] Sign-out → back to onboarding
+[x] Blood sugar entry (numpad) → list → chart updates < 1s
+[x] Unit toggle mg/dL ↔ mmol/L works correctly
+[x] Abnormal entry shows red circled value
+[x] Medication CRUD + XONG → dose counter updates
+[x] Knowledge articles offline on fresh install
+[x] Favorite article persists across restarts
+[x] Profile target range change reflects in blood sugar status
+[x] Onboarding shows once, skipped thereafter
+[x] Sign-out → back to onboarding
 
 Build
-[ ] flutter analyze — 0 errors
-[ ] flutter build apk --release — succeeds
-[ ] App cold start < 2s on mid-range Android emulator
-[ ] No crash on happy paths across all 4 tabs
+[x] flutter analyze — 0 errors
+[x] flutter build apk --release — succeeds
+[x] App cold start < 2s on mid-range Android emulator
+[x] No crash on happy paths across all 4 tabs
 ```
 
 ## Files to Create / Modify
@@ -188,20 +188,20 @@ Build
 
 ## Todo
 
-- [ ] Schemas already complete from Phase 02 (F1) — no build_runner re-run needed
-- [ ] Complete go_router routes in `app.dart` (all nested routes)
-- [ ] Implement onboarding screen (3 pages)
-- [ ] Finalize `scaffold-with-bottom-nav.dart` (4 tabs)
-- [ ] Add seed + profile init in `main.dart`
-- [ ] Update Android + iOS app name + add POST_NOTIFICATIONS permission to AndroidManifest (F9)
-- [ ] Full UI fidelity review against all 4 mockups
-- [ ] Run `flutter analyze` → fix all issues
-- [ ] Run `flutter build apk --release`
-- [ ] Manual smoke test on Android emulator (all happy paths)
+- [x] Schemas already complete from Phase 02 (F1) — no build_runner re-run needed
+- [x] Complete go_router routes in `app.dart` (all nested routes)
+- [x] Implement onboarding screen (3 pages)
+- [x] Finalize `scaffold-with-bottom-nav.dart` (4 tabs)
+- [x] Add seed + profile init in `main.dart`
+- [x] Update Android + iOS app name + add POST_NOTIFICATIONS permission to AndroidManifest (F9)
+- [x] Full UI fidelity review against all 4 mockups
+- [x] Run `flutter analyze` → fix all issues
+- [x] Run `flutter build apk --release`
+- [x] Manual smoke test on Android emulator (all happy paths)
 
 ## Success Criteria
 
-- [ ] `flutter analyze` exits 0
-- [ ] `flutter build apk --release` exits 0
-- [ ] All 4 screens visually match their mockups
-- [ ] Full happy-path smoke test passes
+- [x] `flutter analyze` exits 0
+- [x] `flutter build apk --release` exits 0
+- [x] All 4 screens visually match their mockups
+- [x] Full happy-path smoke test passes

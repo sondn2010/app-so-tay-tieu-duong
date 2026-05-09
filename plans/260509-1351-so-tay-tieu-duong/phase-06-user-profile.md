@@ -1,6 +1,6 @@
 # Phase 06 — User Profile (Hồ Sơ)
 
-**Status:** pending  
+**Status:** complete  
 **Priority:** high  
 **BlockedBy:** Phase 02  
 **File ownership:** `src/lib/features/profile/` (Agent 3 only)  
@@ -168,19 +168,19 @@ Future<void> signOut(BuildContext ctx) async {
 
 ## Todo
 
-- [ ] Add `image_picker` to pubspec.yaml (Coordinator Phase 01/02)
-- [ ] Implement `UserProfileRepository` + `AvatarService`
-- [ ] Implement Riverpod providers (profile + target range)
-- [ ] Implement profile screen (Stitch MCP → ref `5_hosonguoidung.html`)
-- [ ] Implement edit profile screen with RangeSlider
-- [ ] Implement sign-out with confirm dialog
-- [ ] Create stub screens (data sync, help)
-- [ ] Test: custom target range → Phase 07 Home reflects new range
-- [ ] Test: avatar change persists after restart
+- [x] Add `image_picker` to pubspec.yaml (Coordinator Phase 01/02)
+- [x] Implement `UserProfileRepository` + `AvatarService`
+- [x] Implement Riverpod providers (profile + target range)
+- [x] Implement profile screen (Stitch MCP → ref `5_hosonguoidung.html`)
+- [x] Implement edit profile screen with RangeSlider
+- [x] Implement sign-out with confirm dialog
+- [x] Create stub screens (data sync, help)
+- [x] Test: custom target range → Phase 07 Home reflects new range
+- [x] Test: avatar change persists after restart
 
 ## Success Criteria
 
-- [ ] Profile screen matches `5_hosonguoidung.png` layout
-- [ ] Target range change reflected in blood sugar status calculations
-- [ ] Sign-out clears data and redirects to onboarding
-- [ ] Avatar picked from gallery, stored locally, survives restart
+- [x] Profile screen matches `5_hosonguoidung.png` layout
+- [x] Target range change reflected in blood sugar status calculations
+- [x] Sign-out clears data and redirects to onboarding
+- [x] Avatar picked from gallery, stored locally, survives restart

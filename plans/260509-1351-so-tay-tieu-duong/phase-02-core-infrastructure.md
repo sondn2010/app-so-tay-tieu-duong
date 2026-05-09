@@ -1,6 +1,6 @@
 # Phase 02 — Core Infrastructure
 
-**Status:** pending  
+**Status:** complete  
 **Priority:** critical  
 **BlockedBy:** Phase 01  
 **Blocks:** Phase 03, 04, 05, 06
@@ -403,17 +403,17 @@ final onboardedProvider = StateProvider<bool>((ref) => false);
 
 ## Todo
 
-- [ ] Create all Isar schema files including DoseLog (F1: all schemas finalized here)
-- [ ] Run `flutter pub run build_runner build`
-- [ ] Download Be Vietnam Pro fonts → `assets/fonts/`
-- [ ] Implement `app-theme.dart` with DESIGN.md colors
-- [ ] Implement `blood-sugar-status.dart`
-- [ ] Implement `notification-service.dart`
-- [ ] Implement shared widgets (paper-card, loading, empty, error)
-- [ ] Implement `scaffold-with-bottom-nav.dart` (4 tabs)
-- [ ] Implement `app.dart` + `main.dart`
-- [ ] `flutter analyze` — 0 errors
-- [ ] App launches with warm paper background + 4 bottom tabs
+- [x] Create all Isar schema files including DoseLog (F1: all schemas finalized here)
+- [x] Run `flutter pub run build_runner build`
+- [x] Download Be Vietnam Pro fonts → `assets/fonts/`
+- [x] Implement `app-theme.dart` with DESIGN.md colors
+- [x] Implement `blood-sugar-status.dart`
+- [x] Implement `notification-service.dart`
+- [x] Implement shared widgets (paper-card, loading, empty, error)
+- [x] Implement `scaffold-with-bottom-nav.dart` (4 tabs)
+- [x] Implement `app.dart` + `main.dart`
+- [x] `flutter analyze` — 0 errors
+- [x] App launches with warm paper background + 4 bottom tabs
 
 ## Success Criteria
 

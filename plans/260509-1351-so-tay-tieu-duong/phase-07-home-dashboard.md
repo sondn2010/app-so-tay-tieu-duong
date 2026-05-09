@@ -1,6 +1,6 @@
 # Phase 07 — Home Dashboard (Trang Chủ)
 
-**Status:** pending  
+**Status:** complete  
 **Priority:** high  
 **BlockedBy:** Phase 03, Phase 04  
 **Owner:** Coordinator  
@@ -178,22 +178,22 @@ String greetByTime() {
 
 ## Todo
 
-- [ ] Write 30 Vietnamese health quotes in `daily-quotes.dart`
-- [ ] Implement `StepsRepository` (SharedPreferences)
-- [ ] Implement Riverpod providers
-- [ ] Implement `BloodSugarMiniChart` widget
-- [ ] Implement `HomeScreen` composing all widgets (Stitch MCP → ref `0_home.html`)
-- [ ] Wire greeting by time-of-day
-- [ ] Wire `MedicationReminderBanner` from Phase 04
-- [ ] Steps tap → edit dialog
-- [ ] Test: XONG on banner → banner disappears (nextPendingDose changes)
-- [ ] Test: blood sugar widget shows correct color per status
+- [x] Write 30 Vietnamese health quotes in `daily-quotes.dart`
+- [x] Implement `StepsRepository` (SharedPreferences)
+- [x] Implement Riverpod providers
+- [x] Implement `BloodSugarMiniChart` widget
+- [x] Implement `HomeScreen` composing all widgets (Stitch MCP → ref `0_home.html`)
+- [x] Wire greeting by time-of-day
+- [x] Wire `MedicationReminderBanner` from Phase 04
+- [x] Steps tap → edit dialog
+- [x] Test: XONG on banner → banner disappears (nextPendingDose changes)
+- [x] Test: blood sugar widget shows correct color per status
 
 ## Success Criteria
 
-- [ ] Home screen matches `0_home.png` layout
-- [ ] Blood sugar widget reflects latest entry with correct color
-- [ ] Medication banner shows/hides based on pending doses
-- [ ] Dose counter shows correct X/Y
-- [ ] Daily quote changes each day
-- [ ] Steps editable via tap dialog
+- [x] Home screen matches `0_home.png` layout
+- [x] Blood sugar widget reflects latest entry with correct color
+- [x] Medication banner shows/hides based on pending doses
+- [x] Dose counter shows correct X/Y
+- [x] Daily quote changes each day
+- [x] Steps editable via tap dialog

@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "articles": [
+    {
+      "id": "art-001",
+      "title": "Tiểu đường Type 2: Những điều cơ bản",
+      "category": "Tiểu đường là gì",
+      "content": "Tiểu đường Type 2 là tình trạng cơ thể không sử dụng insulin hiệu quả. Đây là loại tiểu đường phổ biến nhất, chiếm 90-95% các ca bệnh tiểu đường.\n\nCác yếu tố nguy cơ bao gồm thừa cân, ít vận động, tiền sử gia đình, và tuổi tác. Triệu chứng thường gặp: khát nước nhiều, tiểu nhiều, mệt mỏi, nhìn mờ, vết thương lâu lành.\n\nKiểm soát tốt đường huyết thông qua chế độ ăn lành mạnh, vận động đều đặn, và theo dõi chỉ số hàng ngày là chìa khóa để sống khỏe với tiểu đường Type 2.",
+      "imageUrl": null,
+      "readTimeMinutes": 5,
+      "version": 1
+    },
+    {
+      "id": "art-002",
+      "title": "Thực đơn Low-GI hàng ngày cho người tiểu đường",
+      "category": "Thực phẩm",
+      "content": "Chỉ số đường huyết (GI) đo tốc độ thực phẩm làm tăng đường huyết. Thực phẩm Low-GI (GI < 55) giúp kiểm soát đường huyết ổn định.\n\nThực phẩm Low-GI nên ăn: gạo lứt, yến mạch, khoai lang, đậu các loại, rau xanh, táo, lê, cam. Tránh: bánh mì trắng, cơm trắng, nước ngọt, bánh kẹo ngọt.\n\nGợi ý thực đơn mẫu:\n- Sáng: cháo yến mạch + trứng + rau\n- Trưa: cơm gạo lứt + cá + rau xanh\n- Tối: súp rau củ + đậu phụ + salad\n- Phụ: trái cây ít ngọt (táo, lê)",
+      "imageUrl": null,
+      "readTimeMinutes": 6,
+      "version": 1
+    },
+    {
+      "id": "art-003",
+      "title": "15 phút Yoga nhẹ nhàng mỗi sáng",
+      "category": "Vận động",
+      "content": "Vận động đều đặn giúp cải thiện độ nhạy insulin và kiểm soát đường huyết hiệu quả. Yoga buổi sáng là lựa chọn lý tưởng cho người tiểu đường.\n\nBài tập 15 phút mỗi sáng:\n1. Thở sâu (2 phút): hít thở đều đặn, thư giãn cơ thể\n2. Vặn người nhẹ (3 phút): ngồi, vặn người sang trái phải\n3. Tư thế mèo-bò (3 phút): quỳ, ưỡn và cong lưng\n4. Tư thế chiến binh I (4 phút): tăng sức mạnh cơ chân\n5. Hít thở kết thúc (3 phút): nằm thư giãn\n\nLợi ích: giảm stress, cải thiện lưu thông máu, hạ đường huyết sau ăn.",
+      "imageUrl": null,
+      "readTimeMinutes": 4,
+      "version": 1
+    },
+    {
+      "id": "art-004",
+      "title": "Lưu ý khi dùng Metformin",
+      "category": "Cách dùng thuốc",
+      "content": "Metformin là thuốc điều trị tiểu đường Type 2 phổ biến nhất, giúp hạ đường huyết bằng cách giảm sản xuất glucose ở gan.\n\nCách dùng đúng:\n- Uống cùng bữa ăn hoặc sau bữa ăn để giảm tác dụng phụ tiêu hóa\n- Không bỏ liều, uống đúng giờ mỗi ngày\n- Uống đủ nước trong ngày\n\nTác dụng phụ thường gặp:\n- Buồn nôn, tiêu chảy (thường giảm sau 2-4 tuần)\n- Vị kim loại trong miệng\n\nCần thông báo ngay với bác sĩ nếu: đau cơ bất thường, khó thở, chóng mặt nhiều.",
+      "imageUrl": null,
+      "readTimeMinutes": 5,
+      "version": 1
+    },
+    {
+      "id": "art-005",
+      "title": "Giải mã chỉ số HbA1c",
+      "category": "Chỉ số đường huyết",
+      "content": "HbA1c (Hemoglobin A1c) phản ánh mức đường huyết trung bình trong 2-3 tháng qua. Đây là xét nghiệm quan trọng để đánh giá kiểm soát đường huyết dài hạn.\n\nÝ nghĩa chỉ số:\n- Dưới 5.7%: Bình thường\n- 5.7% - 6.4%: Tiền tiểu đường\n- 6.5% trở lên: Tiểu đường\n- Mục tiêu cho người tiểu đường: dưới 7%\n\nNên xét nghiệm HbA1c mỗi 3-6 tháng. Kết hợp với theo dõi đường huyết hàng ngày để có bức tranh toàn diện về sức khỏe của bạn.",
+      "imageUrl": null,
+      "readTimeMinutes": 4,
+      "version": 1
+    },
+    {
+      "id": "art-006",
+      "title": "Các biến chứng phổ biến của tiểu đường",
+      "category": "Biến chứng",
+      "content": "Tiểu đường không được kiểm soát tốt có thể dẫn đến nhiều biến chứng nghiêm trọng. Hiểu và phòng ngừa là điều then chốt.\n\nBiến chứng tim mạch: nguy cơ cao gấp 2-4 lần so với người bình thường. Kiểm soát huyết áp và cholesterol rất quan trọng.\n\nBiến chứng thận (bệnh thận do tiểu đường): xét nghiệm nước tiểu hàng năm để phát hiện sớm.\n\nBiến chứng mắt (võng mạc tiểu đường): khám mắt định kỳ mỗi năm. Phát hiện sớm có thể ngăn ngừa mù lòa.\n\nBiến chứng thần kinh ngoại biên: tê bì, đau nhức tay chân. Chăm sóc bàn chân hàng ngày rất cần thiết.\n\nPhòng ngừa tốt nhất: kiểm soát đường huyết, huyết áp, và cholesterol trong giới hạn cho phép.",
+      "imageUrl": null,
+      "readTimeMinutes": 7,
+      "version": 1
+    },
+    {
+      "id": "art-007",
+      "title": "Chỉ số đường huyết bình thường là bao nhiêu?",
+      "category": "Chỉ số đường huyết",
+      "content": "Hiểu chỉ số đường huyết giúp bạn tự theo dõi và kiểm soát sức khỏe hiệu quả.\n\nChỉ số bình thường (mg/dL):\n- Khi đói (nhịn ăn 8 giờ): 70-99 mg/dL\n- 2 giờ sau ăn: dưới 140 mg/dL\n- Ngẫu nhiên: dưới 200 mg/dL\n\nNgưỡng chẩn đoán tiểu đường:\n- Khi đói ≥ 126 mg/dL (2 lần đo)\n- 2h sau ăn ≥ 200 mg/dL\n- Ngẫu nhiên ≥ 200 mg/dL + có triệu chứng\n\nMục tiêu cho người đang điều trị tiểu đường:\n- Trước ăn: 80-130 mg/dL\n- 2h sau ăn: dưới 180 mg/dL\n\nĐo đường huyết đúng thời điểm và ghi lại kết quả giúp bác sĩ điều chỉnh phác đồ điều trị phù hợp.",
+      "imageUrl": null,
+      "readTimeMinutes": 5,
+      "version": 1
+    },
+    {
+      "id": "art-008",
+      "title": "Thực phẩm nên tránh khi bị tiểu đường",
+      "category": "Thực phẩm",
+      "content": "Một số thực phẩm có thể làm tăng đường huyết đột ngột, gây khó kiểm soát bệnh tiểu đường.\n\nCần hạn chế hoặc tránh:\n- Đồ uống có đường: nước ngọt, nước trái cây đóng hộp, trà đường\n- Tinh bột tinh chế: bánh mì trắng, cơm trắng, bún, phở (ăn ít)\n- Đồ ngọt: bánh kẹo, kem, pudding\n- Trái cây quá ngọt: xoài chín, dưa hấu, nho khô\n- Thực phẩm nhiều chất béo bão hòa: thịt mỡ, đồ chiên rán\n- Rượu bia: làm rối loạn đường huyết\n\nLưu ý: Không cần kiêng tuyệt đối, mà cần kiểm soát khẩu phần và tần suất. Tham khảo chuyên gia dinh dưỡng để xây dựng thực đơn cá nhân hóa.",
+      "imageUrl": null,
+      "readTimeMinutes": 5,
+      "version": 1
+    },
+    {
+      "id": "art-009",
+      "title": "Tập thể dục và tiểu đường: Bắt đầu như thế nào?",
+      "category": "Vận động",
+      "content": "Vận động là một trong những công cụ mạnh nhất để kiểm soát tiểu đường. Cơ bắp sử dụng glucose mà không cần insulin khi hoạt động.\n\nLợi ích của vận động:\n- Hạ đường huyết trong và sau tập\n- Tăng độ nhạy insulin lên đến 24-72 giờ\n- Giảm cân, cải thiện tim mạch\n- Giảm stress và cải thiện tâm trạng\n\nHướng dẫn cho người mới bắt đầu:\n1. Bắt đầu nhẹ nhàng: đi bộ 10-15 phút/ngày\n2. Tăng dần: mục tiêu 150 phút/tuần\n3. Kết hợp cardio và rèn luyện sức mạnh\n4. Đo đường huyết trước và sau tập\n5. Mang theo đường hoặc snack khi tập\n\nTránh tập khi đường huyết < 100 mg/dL hoặc > 250 mg/dL.",
+      "imageUrl": null,
+      "readTimeMinutes": 6,
+      "version": 1
+    },
+    {
+      "id": "art-010",
+      "title": "Tiểu đường Type 1 vs Type 2: Khác nhau thế nào?",
+      "category": "Tiểu đường là gì",
+      "content": "Nhiều người nhầm lẫn giữa tiểu đường Type 1 và Type 2. Hiểu sự khác biệt giúp điều trị đúng hướng.\n\nTiểu đường Type 1:\n- Hệ miễn dịch tấn công tế bào beta tụy, không sản xuất được insulin\n- Thường phát hiện từ nhỏ đến tuổi 30\n- Bắt buộc tiêm insulin suốt đời\n- Chiếm 5-10% ca tiểu đường\n\nTiểu đường Type 2:\n- Cơ thể kháng insulin hoặc sản xuất không đủ\n- Thường gặp ở người trung niên, thừa cân\n- Điều trị: thay đổi lối sống, thuốc uống, có thể insulin\n- Chiếm 90-95% ca tiểu đường\n\nĐiểm chung: cả hai đều cần theo dõi đường huyết thường xuyên, chế độ ăn lành mạnh, và tuân thủ điều trị.",
+      "imageUrl": null,
+      "readTimeMinutes": 5,
+      "version": 1
+    }
+  ]
+}

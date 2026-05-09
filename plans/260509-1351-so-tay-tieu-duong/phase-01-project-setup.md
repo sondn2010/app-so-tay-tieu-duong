@@ -1,6 +1,6 @@
 # Phase 01 — Project Setup & Flutter Foundation
 
-**Status:** pending  
+**Status:** complete  
 **Priority:** critical  
 **Blocks:** Phase 02
 
@@ -117,13 +117,13 @@ dev_dependencies:
 
 ## Todo
 
-- [ ] Run `flutter create src/`
-- [ ] Update pubspec.yaml dependencies
-- [ ] Create folder structure with `.gitkeep` placeholders
-- [ ] Add assets declaration in pubspec.yaml
-- [ ] Create `assets/knowledge/articles.json` with `[]`
-- [ ] Run `flutter pub get`
-- [ ] Smoke test on Android emulator
+- [x] Run `flutter create src/`
+- [x] Update pubspec.yaml dependencies
+- [x] Create folder structure with `.gitkeep` placeholders
+- [x] Add assets declaration in pubspec.yaml
+- [x] Create `assets/knowledge/articles.json` with `[]`
+- [x] Run `flutter pub get`
+- [x] Smoke test on Android emulator
 
 ## Success Criteria
 

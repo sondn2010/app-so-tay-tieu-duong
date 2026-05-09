@@ -1,6 +1,6 @@
 # Phase 05 — Knowledge Base Module (Sổ Tay Kiến Thức)
 
-**Status:** pending  
+**Status:** complete  
 **Priority:** high  
 **BlockedBy:** Phase 02  
 **File ownership:** `src/lib/features/knowledge/`, `src/assets/knowledge/` (Agent 3 only)  
@@ -250,23 +250,23 @@ Layout (ref: `4_sotaykienthuc.html`):
 
 ## Todo
 
-- [ ] Schema already complete in Phase 02 (F1) — no coordinator message needed
-- [ ] Write 10 bundled articles in `articles.json` with top-level `"version": 1`
-- [ ] Implement `Article.fromJson` factory (F4) in article.dart
-- [ ] Implement `ArticleRepository` (seed with version check F14, sync with isFavorite merge F5, version guard F7)
-- [ ] Replace `'your-org'` placeholder in AppConfig with real GitHub org (F7)
-- [ ] Implement Riverpod providers
-- [ ] Implement article list screen (Stitch MCP → ref `4_sotaykienthuc.html`)
-- [ ] Implement article detail screen (render content as plain text — no WebView/HTML, F7)
-- [ ] Wire seed + sync in `main.dart` (Coordinator task)
-- [ ] Test: offline first launch shows bundled articles
-- [ ] Test: heart toggle persists across app restart AND after remote sync
-- [ ] Test: "Yêu thích" chip shows only favorited articles
+- [x] Schema already complete in Phase 02 (F1) — no coordinator message needed
+- [x] Write 10 bundled articles in `articles.json` with top-level `"version": 1`
+- [x] Implement `Article.fromJson` factory (F4) in article.dart
+- [x] Implement `ArticleRepository` (seed with version check F14, sync with isFavorite merge F5, version guard F7)
+- [x] Replace `'your-org'` placeholder in AppConfig with real GitHub org (F7)
+- [x] Implement Riverpod providers
+- [x] Implement article list screen (Stitch MCP → ref `4_sotaykienthuc.html`)
+- [x] Implement article detail screen (render content as plain text — no WebView/HTML, F7)
+- [x] Wire seed + sync in `main.dart` (Coordinator task)
+- [x] Test: offline first launch shows bundled articles
+- [x] Test: heart toggle persists across app restart AND after remote sync
+- [x] Test: "Yêu thích" chip shows only favorited articles
 
 ## Success Criteria
 
-- [ ] Articles visible offline on fresh install
-- [ ] Category + search filter works correctly
-- [ ] Favorite persists after app restart
-- [ ] "Xem thêm" loads next 10 articles
-- [ ] Read time displayed on every card
+- [x] Articles visible offline on fresh install
+- [x] Category + search filter works correctly
+- [x] Favorite persists after app restart
+- [x] "Xem thêm" loads next 10 articles
+- [x] Read time displayed on every card

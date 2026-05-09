@@ -1,6 +1,6 @@
 # Phase 03 — Blood Sugar Module (Nhật Ký Đường Huyết)
 
-**Status:** pending  
+**Status:** complete  
 **Priority:** high  
 **BlockedBy:** Phase 02  
 **File ownership:** `src/lib/features/blood_sugar/` (Agent 1 only)  
@@ -208,22 +208,22 @@ FAB on diary screen → navigate to `/diary/add`
 
 ## Todo
 
-- [ ] Implement `BloodSugarRepository` + unit conversion
-- [ ] Implement Riverpod providers + computed insight
-- [ ] Implement `BloodSugarNumpad` widget
-- [ ] Implement entry screen with numpad + unit toggle (Stitch MCP → ref `2_nhatky.html`)
-- [ ] Implement diary screen (chart + history)
-- [ ] Implement `BloodSugarValueBadge` for abnormal highlight
-- [ ] Wire FAB and navigation in app.dart
-- [ ] Test: mmol/L input converts correctly to mg/dL on save
-- [ ] Test: 165 mg/dL entry shows red, 98 shows green
-- [ ] Test: input 15 mg/dL → rejected with error (V3: below min 20)
-- [ ] Test: input 650 mg/dL → rejected with error (V3: above max 600)
+- [x] Implement `BloodSugarRepository` + unit conversion
+- [x] Implement Riverpod providers + computed insight
+- [x] Implement `BloodSugarNumpad` widget
+- [x] Implement entry screen with numpad + unit toggle (Stitch MCP → ref `2_nhatky.html`)
+- [x] Implement diary screen (chart + history)
+- [x] Implement `BloodSugarValueBadge` for abnormal highlight
+- [x] Wire FAB and navigation in app.dart
+- [x] Test: mmol/L input converts correctly to mg/dL on save
+- [x] Test: 165 mg/dL entry shows red, 98 shows green
+- [x] Test: input 15 mg/dL → rejected with error (V3: below min 20)
+- [x] Test: input 650 mg/dL → rejected with error (V3: above max 600)
 
 ## Success Criteria
 
-- [ ] Entry saved with custom numpad → visible in list < 1s
-- [ ] Unit toggle updates display without saving again
-- [ ] Abnormal entries (< 70, ≥ 126) show red circled value
-- [ ] Chart renders 7 days with correct colors
-- [ ] Computed insight shown only when latest entry is abnormal
+- [x] Entry saved with custom numpad → visible in list < 1s
+- [x] Unit toggle updates display without saving again
+- [x] Abnormal entries (< 70, ≥ 126) show red circled value
+- [x] Chart renders 7 days with correct colors
+- [x] Computed insight shown only when latest entry is abnormal
