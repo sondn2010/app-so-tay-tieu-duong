@@ -45,6 +45,14 @@ dev_dependencies:
   build_runner: ^2.4.9
   isar_generator: ^3.1.0
   flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.3
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "C:/Sources/fish/outsource/app-so-tay-tieu-duong/appicon.png"
+  adaptive_icon_background: "#E91E63"
+  adaptive_icon_foreground: "C:/Sources/fish/outsource/app-so-tay-tieu-duong/appicon.png"
 
 flutter:
   uses-material-design: true
